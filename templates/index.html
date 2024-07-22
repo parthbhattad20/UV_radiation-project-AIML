@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposure Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-black  items-center h-screen font-sans ">
+    <nav class="bg-black border-gray-200">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+          </a>
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="./index.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="./About.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+              </li>
+              <li>
+                <a href="./Refrances.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Referances</a>
+              </li>
+              <li>
+                <a href="./Effects.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Effects</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+      <div style="background-image: url('/path/to/your/image.jpg'); background-size: cover; background-position: center;" class="mt-10 bg-gray-900 p-10 rounded-lg shadow-lg animate-fadeIn flex flex-col items-center justify-center">
+        <h2 class="text-center text-2xl mb-6 text-blue-500">Exposure Prediction</h2>
+        <form action="/predict" method="post" class="flex flex-wrap gap-4 justify-center w-full max-w-4xl">
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <label for="species" class="font-bold mb-2 block text-gray-300">Species:</label>
+                <select id="species" name="species" required class="w-full p-2 border border-gray-300 rounded">
+                    <option value="species1">Species 1</option>
+                    <option value="species2">Species 2</option>
+                    <option value="species3">Species 3</option>
+                </select>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <label for="organism" class="font-bold mb-2 block text-gray-300">Organism:</label>
+                <select id="organism" name="organism" required class="w-full p-2 border border-gray-300 rounded">
+                    <option value="organism1">Organism 1</option>
+                    <option value="organism2">Organism 2</option>
+                    <option value="organism3">Organism 3</option>
+                </select>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <label for="uv" class="font-bold mb-2 block text-gray-300">UV:</label>
+                <select id="uv" name="uv" required class="w-full p-2 border border-gray-300 rounded">
+                    <option value="uv1">UV 1</option>
+                    <option value="uv2">UV 2</option>
+                    <option value="uv3">UV 3</option>
+                </select>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <label for="intensity" class="font-bold mb-2 block text-gray-300">Exposure Intensity:</label>
+                <select id="intensity" name="intensity" required class="w-full p-2 border border-gray-300 rounded">
+                    <option value="J">J</option>
+                    <option value="KJ">KJ</option>
+                    <option value="W">W</option>
+                    <option value="KW">KW</option>
+                </select>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <label for="time" class="font-bold mb-2 block text-gray-300">Exposure Time (in seconds):</label>
+                <input type="number" id="time" name="time" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <label for="organelle" class="font-bold mb-2 block text-gray-300">Organelle:</label>
+                <input type="text" id="organelle" name="organelle" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <label for="metabolites" class="font-bold mb-2 block text-gray-300">Metabolites Names:</label>
+                <input type="text" id="metabolites" name="metabolites" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <label for="proteins" class="font-bold mb-2 block text-gray-300">Proteins Names:</label>
+                <input type="text" id="proteins" name="proteins" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <label for="genes" class="font-bold mb-2 block text-gray-300">Genes Names:</label>
+                <input type="text" id="genes" name="genes" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4">
+                <label for="tissue" class="font-bold mb-2 block text-gray-300">Studied Tissue:</label>
+                <input type="text" id="tissue" name="tissue" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="w-full flex justify-center mt-4">
+                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300">Predict</button>
+            </div>
+        </form>
+        
+        <h3 class="text-center text-xl mt-6 text-gray-300">Predictions:</h3>
+        <p class="text-center text-gray-300"><strong>Exposure Severity:</strong> {{ severity_prediction }}</p>
+        <p class="text-center text-gray-300"><strong>Biological Response:</strong> {{ response_prediction }}</p>
+    </div>
+    
+</body>
+
+</html>
