@@ -46,34 +46,34 @@
             <div class="w-full md:w-1/2 lg:w-1/4">
                 <label for="species" class="font-bold mb-2 block text-gray-300">Species:</label>
                 <select id="species" name="species" required class="w-full p-2 border border-gray-300 rounded">
-                    <option value="species1">Species 1</option>
-                    <option value="species2">Species 2</option>
-                    <option value="species3">Species 3</option>
+                    <option value="Mus musculus">Mus musculus</option>
+                    <option value="Arabidopsis thaliana">Arabidopsis thaliana</option>
+                    <option value="Homo sapiens">Homo sapiens</option>
+                    <option value="Escherichia coli">Escherichia coli</option>
                 </select>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/4">
                 <label for="organism" class="font-bold mb-2 block text-gray-300">Organism:</label>
                 <select id="organism" name="organism" required class="w-full p-2 border border-gray-300 rounded">
-                    <option value="organism1">Organism 1</option>
-                    <option value="organism2">Organism 2</option>
-                    <option value="organism3">Organism 3</option>
+                    <option value="Human">Human</option>
+                    <option value="Animal">Animal</option>
+                    <option value="golgi">golgi</option>
+                    <option value="cell wall">cell wall</option>
+               
+
                 </select>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/4">
                 <label for="uv" class="font-bold mb-2 block text-gray-300">UV:</label>
                 <select id="uv" name="uv" required class="w-full p-2 border border-gray-300 rounded">
-                    <option value="uv1">UV 1</option>
-                    <option value="uv2">UV 2</option>
-                    <option value="uv3">UV 3</option>
+                    <option value="UV-A">UV-A</option>
+                    <option value="UV-B">UV-B</option>
+                    <option value="UV-C">UV-C</option>
                 </select>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/4">
-                <label for="intensity" class="font-bold mb-2 block text-gray-300">Exposure Intensity:</label>
-                <select id="intensity" name="intensity" required class="w-full p-2 border border-gray-300 rounded">
-                    <option value="J">J</option>
-                    <option value="KJ">KJ</option>
-                    <option value="W">W</option>
-                    <option value="KW">KW</option>
+                <label for="intensity" class="font-bold mb-2 block text-gray-300">Exposure Int:(KJ,KW,W,J)</label>
+                    <input type="text" id="time" name="time" required class="w-full p-2 border border-gray-300 rounded">
                 </select>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/4">
@@ -81,24 +81,119 @@
                 <input type="number" id="time" name="time" required class="w-full p-2 border border-gray-300 rounded">
             </div>
             <div class="w-full md:w-1/2 lg:w-1/4">
-                <label for="organelle" class="font-bold mb-2 block text-gray-300">Organelle:</label>
-                <input type="text" id="organelle" name="organelle" required class="w-full p-2 border border-gray-300 rounded">
+                <label for="organelle" class="font-bold mb-2 block text-gray-300">Organalle:</label>
+                <select id="organelle" name="organelle" required class="w-full p-2 border border-gray-300 rounded">
+                    <option value="lysosome">lysosome </option>
+                    <option value="cytoplasm">cytoplasm  </option>
+                    <option value="golgi">golgi     </option>
+                    <option value="cell wall">cell wall</option>
+                    <option value="membrane">membrane</option>
+                    <option value="mitochondrion">mitochondrion</option>
+                    <option value="proxisome">proxisome</option>
+                    <option value="nucleus">nucleus</option>
+                    <option value="chloroplast">chloroplast</option>
+                    <option value="ribosome">ribosome</option>
+                    <option value="endoplasmic">endoplasmic</option>
+                    <option value="reticulum">reticulum</option>
+                </select>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/4">
                 <label for="metabolites" class="font-bold mb-2 block text-gray-300">Metabolites Names:</label>
-                <input type="text" id="metabolites" name="metabolites" required class="w-full p-2 border border-gray-300 rounded">
+                <select id="metabolites" name="metabolites" required class="w-full p-2 border border-gray-300 rounded">
+                    <option value="Nicotinamide Adenine Dinucleotide">Nicotinamide Adenine Dinucleotide
+                    </option>
+                    <option value="Glucose">Glucose
+                    </option>
+                    <option value="Citric Acid">Citric Acid 
+                    </option>
+                    <option value="Fructose">Fructose
+                    </option>
+                    <option value="Pyruvate">Pyruvate
+                    </option>
+                    <option value="Acetyl-CoA">Acetyl-CoA
+                    </option>
+                    <option value="Adenosine Triphosphate">Adenosine Triphosphate
+                    </option>
+                    <option value="Lactic Acid">Lactic Acid</option>
+                </select>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/4">
                 <label for="proteins" class="font-bold mb-2 block text-gray-300">Proteins Names:</label>
-                <input type="text" id="proteins" name="proteins" required class="w-full p-2 border border-gray-300 rounded">
+                <select id="proteins" name="proteins" required class="w-full p-2 border border-gray-300 rounded">
+                    <option value="Myosin">Myosin
+
+                    </option>
+                    <option value="Cytochrome C">Cytochrome C
+
+                    </option>
+                    <option value="Keratin">Keratin
+
+                    </option>
+                    <option value="Collagen">Collagen
+
+                    </option>
+                    <option value="Insulin">Insulin
+
+                    </option>
+                    <option value="Hemoglobin">Hemoglobin
+
+                    </option>
+                    <option value="Tubulin">Tubulin
+
+                    </option>
+                    <option value="Albumin">Albumin</option>
+                </select>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/4">
                 <label for="genes" class="font-bold mb-2 block text-gray-300">Genes Names:</label>
-                <input type="text" id="genes" name="genes" required class="w-full p-2 border border-gray-300 rounded">
+                <select id="genes" name="genes" required class="w-full p-2 border border-gray-300 rounded">
+                    <option value="EGFR">EGFR
+
+                    </option>
+                    <option value="BRCA1">BRCA1
+
+                    </option>
+                    <option value="APOE">APOE
+
+                    </option>
+                    <option value="KRAS">KRAS
+
+                    </option>
+                    <option value="TP53">TP53
+
+                    </option>
+                    <option value="MTOR">MTOR
+
+                    </option>
+                    <option value="VEGFA">VEGFA
+
+                    </option>
+                    <option value="BRAF">BRAF</option>
+                </select>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/4">
                 <label for="tissue" class="font-bold mb-2 block text-gray-300">Studied Tissue:</label>
-                <input type="text" id="tissue" name="tissue" required class="w-full p-2 border border-gray-300 rounded">
+                <select id="tissue" name="tissue" required class="w-full p-2 border border-gray-300 rounded">
+                    <option value="skin">skin
+
+                    </option>
+                    <option value="cell">cell
+
+                    </option>
+                    <option value="whole body">whole body
+
+                    </option>
+                    <option value="plant">plant
+
+                    </option>
+                    <option value="Pyruvate">Pyruvate
+                    </option>
+                    <option value="seed">seed
+
+                    </option>
+                    <option value="tear">tear
+                    </option>
+                </select>
             </div>
             <div class="w-full flex justify-center mt-4">
                 <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300">Predict</button>
