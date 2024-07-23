@@ -13,6 +13,18 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/about')
+def about():
+    return render_template('About.html')
+
+@app.route('/references')
+def references():
+    return render_template('Refrances.html')
+
+@app.route('/effects')
+def effects():
+    return render_template('Effects.html')
+
 @app.route('/predict', methods=['POST'])
 def predict():
     # Extract form data
